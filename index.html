@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta name="yandex-verification" content="4b1759507e475f16" />
+  <title>US STUDIO</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="dns-prefetch" href="https://www.cbr-xml-daily.ru/" />
+</head>
+<body>
+  <main>
+    <form class="money" action="sendMail.php" method="post">
+      <label for="sum">
+        <p>Сумма, руб</p>
+        <input id="sum" type="number" name="sum" placeholder="100">
+        <p class="error">сумма должна быть больше 0</p>
+      </label>
+      <label for="currency">
+        <p>Валюта для конвертации</p>
+        <select id="currency" name="currency">
+        </select>
+      </label>
+      <label for="total">
+        <p>Сумма в валюте</p>
+        <input id="total" type="text" name="total" readonly>
+      </label>
+      <label for="email">
+        <p>E-mail</p>
+        <input id="email" type="text" name="email" placeholder="example@mail.ru">
+        <p class="error">Полк пустое или заполненно не верно</p>
+      </label>
+      <input id="sendSubmit" type="submit" disabled value="Записаться на обмен валюты">
+    </form>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="//www.cbr-xml-daily.ru/daily_jsonp.js" async></script>
+</body>
+</html>
